@@ -1,6 +1,6 @@
 #slider {
     overflow: hidden;
-    width: 100%;
+    width: 50%;
     position: relative;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -15,10 +15,31 @@
     position: absolute;
     top: 0;
     left: 0;
-
+    z-index: 2;
 }
 
-#coverSlider {}
+#textesA, #textesB {
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 0, 255, 0.288);
+    width: 100%;
+    color: white;
+}
+
+#coverSlider {
+    z-index: 0;
+}
+
+#textesB {
+    z-index: 1;
+}
+
+
+#textesA {
+    z-index: 3;
+}
 
 .transSlider {
     transition: all .5s;
@@ -30,6 +51,35 @@
 
 .slideLeft {
     transform: translateX(-100%);
+}
+
+#prevBTN {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nextBTN {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prevBTN:hover, #nextBTN:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 /* Autre effet possible */
